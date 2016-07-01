@@ -454,7 +454,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
    */
 
   util.ua.webkit = 'undefined' != typeof navigator
-    && /webkit/i.test(navigator.userAgent);
+    && /webkit/i.test('react-native');
 
    /**
    * Detect iPad/iPhone/iPod.
@@ -463,7 +463,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
    */
 
   util.ua.iDevice = 'undefined' != typeof navigator
-      && /iPad|iPhone|iPod/i.test(navigator.userAgent);
+      && /iPad|iPhone|iPod/i.test('react-native');
 
 })('undefined' != typeof io ? io : module.exports, this);
 /**
