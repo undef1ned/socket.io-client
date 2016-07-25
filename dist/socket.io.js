@@ -1768,7 +1768,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
 
     var self = this;
     this.heartbeatTimeoutTimer = setTimeout(function () {
-      self.transport.onClose();
+      self.transport && self.transport.onClose();
     }, this.heartbeatTimeout);
   };
 
