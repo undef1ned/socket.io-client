@@ -1782,7 +1782,8 @@ var io = ('undefined' === typeof module ? {} : module.exports);
 
   Socket.prototype.packet = function (data) {
     if (this.connected && !this.doBuffer) {
-      this.transport.packet(data);
+        //fix bugsnag exception
+      this.transport && this.transport.packet(data);
     } else {
       this.buffer.push(data);
     }
