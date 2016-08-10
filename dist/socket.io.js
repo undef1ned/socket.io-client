@@ -1815,7 +1815,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
    */
 
   Socket.prototype.flushBuffer = function() {
-    this.transport.payload(this.buffer);
+    this.transport && this.transport.payload(this.buffer);
     this.buffer = [];
   };
 
